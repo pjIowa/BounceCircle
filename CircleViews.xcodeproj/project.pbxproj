@@ -14,6 +14,10 @@
 		AB5AFC071BB23DD800995988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5AFC051BB23DD800995988 /* LaunchScreen.storyboard */; };
 		AB5AFC121BB23DD800995988 /* CircleViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AFC111BB23DD800995988 /* CircleViewsTests.swift */; };
 		AB5AFC1D1BB23DD800995988 /* CircleViewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AFC1C1BB23DD800995988 /* CircleViewsUITests.swift */; };
+		ABBD877A1BB911C6005DA52F /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD87791BB911C6005DA52F /* SceneController.swift */; settings = {ASSET_TAGS = (); }; };
+		ABDFB8F81BB4F1650033FBD0 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDFB8F71BB4F1650033FBD0 /* SpriteKit.framework */; };
+		ABDFB8FA1BB4F32B0033FBD0 /* BounceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFB8F91BB4F32B0033FBD0 /* BounceScene.swift */; settings = {ASSET_TAGS = (); }; };
+		ABDFB8FC1BB501330033FBD0 /* smiling.png in Resources */ = {isa = PBXBuildFile; fileRef = ABDFB8FB1BB501330033FBD0 /* smiling.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		AB5AFC181BB23DD800995988 /* CircleViewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleViewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5AFC1C1BB23DD800995988 /* CircleViewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewsUITests.swift; sourceTree = "<group>"; };
 		AB5AFC1E1BB23DD800995988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABBD87791BB911C6005DA52F /* SceneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
+		ABDFB8F71BB4F1650033FBD0 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		ABDFB8F91BB4F32B0033FBD0 /* BounceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceScene.swift; sourceTree = "<group>"; };
+		ABDFB8FB1BB501330033FBD0 /* smiling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiling.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDFB8F81BB4F1650033FBD0 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +86,7 @@
 		AB5AFBF01BB23DD700995988 = {
 			isa = PBXGroup;
 			children = (
+				ABDFB8F71BB4F1650033FBD0 /* SpriteKit.framework */,
 				AB5AFBFB1BB23DD800995988 /* CircleViews */,
 				AB5AFC101BB23DD800995988 /* CircleViewsTests */,
 				AB5AFC1B1BB23DD800995988 /* CircleViewsUITests */,
@@ -101,8 +111,11 @@
 				AB5AFBFE1BB23DD800995988 /* ViewController.swift */,
 				AB5AFC001BB23DD800995988 /* Main.storyboard */,
 				AB5AFC031BB23DD800995988 /* Assets.xcassets */,
+				ABDFB8FB1BB501330033FBD0 /* smiling.png */,
 				AB5AFC051BB23DD800995988 /* LaunchScreen.storyboard */,
 				AB5AFC081BB23DD800995988 /* Info.plist */,
+				ABDFB8F91BB4F32B0033FBD0 /* BounceScene.swift */,
+				ABBD87791BB911C6005DA52F /* SceneController.swift */,
 			);
 			path = CircleViews;
 			sourceTree = "<group>";
@@ -231,6 +244,7 @@
 				AB5AFC071BB23DD800995988 /* LaunchScreen.storyboard in Resources */,
 				AB5AFC041BB23DD800995988 /* Assets.xcassets in Resources */,
 				AB5AFC021BB23DD800995988 /* Main.storyboard in Resources */,
+				ABDFB8FC1BB501330033FBD0 /* smiling.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB5AFBFF1BB23DD800995988 /* ViewController.swift in Sources */,
+				ABDFB8FA1BB4F32B0033FBD0 /* BounceScene.swift in Sources */,
+				ABBD877A1BB911C6005DA52F /* SceneController.swift in Sources */,
 				AB5AFBFD1BB23DD800995988 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +499,7 @@
 				AB5AFC231BB23DD800995988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB5AFC241BB23DD800995988 /* Build configuration list for PBXNativeTarget "CircleViewsTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +508,7 @@
 				AB5AFC261BB23DD800995988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB5AFC271BB23DD800995988 /* Build configuration list for PBXNativeTarget "CircleViewsUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +517,7 @@
 				AB5AFC291BB23DD800995988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,29 +7,37 @@
 //
 
 import UIKit
+import SpriteKit
 
 class SceneController: UIViewController {
-
+    
+    var scene: BounceScene!
+    
+    //constants
+    let kMinDistance: CGFloat = 25
+    let kMinDuration: CGFloat = 0.1
+    let kMinSpeed: CGFloat = 100
+    let kMaxSpeed: CGFloat = 500
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if let spriteView = view as? SKView {
+            scene = BounceScene()
+            scene.size = spriteView.frame.size
+            spriteView.presentScene(scene)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        // only single finger actions
+        if touches.count == 1 {
+            if let touch = touches.first {
+                let point = touch.locationInNode(scene)
+                if let node = scene.nodeAtPoint(point) as? SKSpriteNode {
+                    node.physicsBody?.applyImpulse(CGVectorMake(CGFloat(5), CGFloat(5)))
+                }
+            }
+        }
     }
-    */
-
 }
